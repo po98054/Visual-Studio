@@ -10,7 +10,7 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<title>라디오 박스 예제</title>
+	<title>Select 예제</title>
 
 </head>
 
@@ -20,13 +20,17 @@
 
 		<fieldset>
 
-			<legend>라디오 예제</legend>
+			<legend>Select 예제</legend>
 
-			<div>성별을 선택하세요</div>
+			<select name="city" size="2" multiple>
 
-			<input type="radio" name="gender" value="Men" checked>남자 <br>
+				<option value="Seoul">서울</option>
 
-			<input type="radio" name="gender" value="Women">여자 <br>
+				<option value="Pohang" selected>포항</option>
+
+				<option>인천</option>
+
+			</select>
 
 		</fieldset>
 
