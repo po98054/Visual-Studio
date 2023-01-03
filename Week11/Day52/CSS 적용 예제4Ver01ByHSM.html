@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>CSS 적용 예제 4</title>
+
+	<style>
+
+		.container-box{
+
+			border: 1px solid blueviolet;
+
+		}
+
+		.box1{
+
+			height: 100px;
+
+			background: green;
+
+			width: calc(50% - 10px);
+
+			float: left;
+
+		}
+
+		.box2{
+
+			background-color: brown;
+
+			float: right;
+
+		}
+
+		.container-box::after{
+
+			clear: both;
+
+			display: block;
+
+			content: '';
+
+		}
+
+	</style>
+
+</head>
+
+<body>
+
+	<div class="container-box">
+
+		<div class="box1"></div>
+
+		<div class="box1 box2"></div>
+
+	</div>
+	
+</body>
+
+</html>
