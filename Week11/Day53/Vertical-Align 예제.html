@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Vertical 예제</title>
+
+	<style>
+
+		.box{
+
+			height: 50px;
+
+			border: 1px solid green;
+
+			margin-bottom: 10px;
+
+			line-height: 50px;
+		
+		}
+
+		.box1 > .dot{
+
+			vertical-align: top;
+
+		}
+
+		.box2 > .dot{
+
+			vertical-align: bottom;
+		
+		}
+
+		.box3 > .dot{
+
+			vertical-align: middle;
+
+		}
+
+		.box4 > .dot{
+
+			vertical-align: text-top;
+
+		}
+
+		.dot{
+
+			width: 10px;
+
+			height: 10px;
+
+			background-color: darkcyan;
+
+			display: inline-block;
+
+		}
+
+	</style>
+
+</head>
+
+<body>
+
+	<div class="box box1">
+
+		안녕하세요. <span class="dot"></span>
+
+	</div>
+
+	<div class="box box2">
+
+		안녕하세요. <span class="dot"></span>
+
+	</div>
+
+	<div class="box box3">
+
+		안녕하세요. <span class="dot"></span>
+
+	</div>
+
+	<div class="box box4">
+
+		안녕하세요. <span class="dot"></span>
+
+	</div>
+	
+</body>
+
+</html>

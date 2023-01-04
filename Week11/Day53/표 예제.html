@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>표</title>
+
+	<style>
+
+		table{
+
+			border-collapse: collapse;
+
+			width: 100%;
+
+		}
+
+		tr{
+
+			border: 1px solid blue;
+
+			border-width: 1px 0;
+
+		}
+
+		tr > th:first-child{
+
+			width: 50%;
+
+		}
+
+		tr > th:nth-child(2) {
+
+			width: 25%;
+
+		}
+
+		tr > th:nth-child(3) {
+
+			width: 25%;
+
+		}
+
+		th, td{
+
+			height: 40px;
+
+			text-align: center;
+
+		}
+
+		tbody > tr:hover{
+
+			background-color: darkgray;
+
+		}
+
+	</style>
+
+</head>
+
+<body>
+
+	<table>
+
+		<thead>
+
+			<tr>
+
+				<th>과목</th>
+
+				<th>이름</th>
+
+				<th>점수</th>
+
+			</tr>
+
+	</thead>
+
+	<tbody>
+
+			<tr>
+
+				<td>자바</td>
+
+				<td>김국진</td>
+
+				<td>95</td>
+
+			</tr>
+
+			<tr>
+
+				<td>자바</td>
+
+				<td>유재석</td>
+
+				<td>85</td>
+
+			</tr>
+
+	</tbody>
+
+	</table>
+	
+</body>
+
+</html>
