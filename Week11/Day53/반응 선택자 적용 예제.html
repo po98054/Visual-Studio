@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>반응 선택자</title>
+
+	<style>
+
+		.box{
+
+			width: 100px;
+
+			height: 100px;
+
+			background-color: darkblue;
+
+			position: absolute;
+
+			top: 200px;
+
+		}
+
+		.box:hover{
+
+			background-color: darkcyan;
+
+		}
+
+		.container-box{
+
+			padding: 20px;
+
+			background-color: darkgreen;
+
+		}
+
+		.inner-box{
+
+			padding: 20px;
+
+			background-color: brown;
+
+		}
+
+		.container-box:hover{
+
+			background-color: orange;
+
+		}
+
+		.inner-box:hover{
+
+			background-color: red;
+
+		}
+
+		input:focus{
+
+			background-color: green;
+
+		}
+
+		input:checked + label{
+
+			background-color: gray;
+
+		}
+
+		input:not([type=checkbox]) {
+
+			background-color: darkslategrey;
+
+		}
+
+	</style>
+
+</head>
+
+<body>
+
+	<div class="box"></div>
+
+	<div class="container-box">
+
+		<div class="inner-box">
+
+			<div class="box"></div>
+
+		</div>
+
+	</div>
+
+	<input type="text" id="text">
+
+	<input type="checkbox" name="" id="apple">
+
+	<label for="apple">사과</label>
+	
+</body>
+
+</html>

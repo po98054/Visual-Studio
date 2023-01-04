@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>구조 선택자 적용 예제</title>
+
+	<style>
+
+		li:last-child{
+
+			color:brown;
+
+		}
+
+		li:first-child{
+
+			color:darkblue;
+
+		}
+
+		.fruit:nth-child(2) {
+
+			color:pink;
+
+		}
+
+		li:nth-of-type(3) {
+
+			color:green;
+
+		}
+
+		.fruit:nth-child(3){
+
+			text-decoration: underline;
+
+		}
+
+		.fruit:nth-of-type(3) {
+
+			font-size: 30px;
+
+		}
+
+		p:nth-child(2) {
+
+			color : darkcyan;
+
+		}
+
+		p:nth-of-type(2) {
+
+			background-color: gray;
+
+		}
+
+	</style>
+
+</head>
+
+<body>
+
+	<ul>
+
+		<li>사과</li>
+
+		<li class="fruit">포도</li>
+
+		<li class="fruit">배</li>
+
+		<li class="fruit">오렌지</li>
+
+	</ul>
+
+	<div>
+
+		<h1>h1 태그</h1>
+
+		<p>p 태그</p>
+
+		<p>p 태그</p>
+
+		<p>p 태그</p>
+
+	</div>
+	
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>CSS 적용 예제</title>
+
+	<style>
+
+		*{
+			
+			margin: 0;
+		
+		}
+
+		.container-box{
+
+			border: 3px solid blueviolet;
+
+		}
+
+		.box{
+
+			height: 100px;
+			
+			width: 33.33%;
+
+			float: left;
+
+			background-color: blue;
+
+		}
+
+		.box~.box{
+
+			border-left: 5px solid darkblue;
+
+			margin-left: -5px;
+
+		}
+
+		.box1{
+
+			background-color: yellow;
+
+		}
+
+		.box2{
+
+			background-color: green;
+
+		}
+
+		.box3{
+
+			background-color: gray;
+
+		}
+
+		.container-box::after{
+
+			clear: both;
+
+			content: '';
+
+			display: block;
+
+		}
+
+		a{
+
+			color: black;
+			
+		}
+
+	</style>
+
+</head>
+
+<body>
+
+	<div class="container-box">
+
+		<div class="box box1">
+
+			<a href="http://www.naver.com" id="naver">네이버로</a>
+
+		</div>
+
+		<div class="box box2">
+
+			<a href="http://www.daum.com">다음으로</a>
+
+		</div>
+
+		<div class="box box3">
+
+			<a href="http://www.google.com">구글으로</a>
+
+		</div>
+
+	</div>
+	
+</body>
+
+</html>
