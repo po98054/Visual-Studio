@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>CSS 적용 예제 2</title>
+
+	<style>
+
+		.container{
+
+			width: 400px;
+
+			height: 50px;
+
+			border: 2px solid brown;
+
+		}
+
+		.box{
+
+			margin: 10px;
+
+			height: 30px;
+
+			/*width: 200px;
+
+			height: 100px;
+
+			margin: 10px;
+
+			float: left;
+
+			box-sizing: border-box;*/
+
+		}
+
+		button{
+
+			width: 50px;
+
+			height: 50px;
+
+			float: right;
+
+			margin-bottom: 10px;
+
+		}
+
+		.container-box::after{
+
+			display: block;
+
+			content: '';
+
+			clear: both;
+
+		}
+
+	</style>
+
+</head>
+
+<body>
+
+	<div class="container">
+
+		<input type="text" class="box">
+
+		<button></button>
+
+	</div>
+	
+</body>
+
+</html>
