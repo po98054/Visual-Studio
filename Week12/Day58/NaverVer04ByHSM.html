@@ -1190,6 +1190,204 @@
 
 		}
 
+		.box-body-left2 .box-body .donga{
+
+			height: 260px;
+
+			position: relative;
+
+			margin-top: 12px;
+
+			border: 1px solid #dae1e6;
+
+		}
+
+		.box-body-left2 .box-body .donga .line,
+		
+		.box-body-left2 .box-body .donga-box .line{
+
+			background-color: #000;
+
+			position: absolute;
+
+			/*opacity: 0.07;*/
+
+		}
+
+		.box-body-left2 .box-body .donga .line-top,
+		
+		.box-body-left2 .box-body .donga-box .line-top{
+
+			height: 1px;
+
+			left: 0;
+
+			right: 0;
+
+			top: 0;
+
+		}
+
+		.box-body-left2 .box-body .donga .line-bottom,
+		
+		.box-body-left2 .box-body .donga-box .line-bottom{
+
+			height: 1px;
+
+			left: 0;
+
+			right: 0;
+
+			bottom: 0;
+
+		}
+
+		.box-body-left2 .box-body .donga .line-left,
+		
+		.box-body-left2 .box-body .donga-box .line-left{
+
+			width: 1px;
+
+			left: 0;
+
+			bottom: 0;
+
+			top: 0;
+
+		}
+
+		.box-body-left2 .box-body .donga .line-right,
+		
+		.box-body-left2 .box-body .donga-box .line-right{
+
+			width: 1px;
+
+			right: 0;
+
+			bottom: 0;
+
+			top: 0;
+			
+		}
+
+		.box-body-left2 .box-body .donga-box{
+
+			position: relative;
+
+			float: left;
+
+			width: 16.66%;
+
+			height: 65%;
+
+		}
+
+		.box-body-left2 .box-body .donga-box .news-donga{
+
+			display: block;
+
+			padding: 23px 0 22px;
+
+			text-align: center;
+
+		}
+
+		.box-body-left2 .box-body .donga-box .news-donga:hover{
+
+			text-align: center;
+
+			padding: 19px 0 18px;
+
+			display: none;
+
+		}
+
+		.popup-donga .btn-donga{
+
+			display: inline-block;
+
+			padding: 7px 8px 5px;
+
+			background-color: #fff;
+
+			border: 1px solid #dae1e6;
+
+			font-size: 12px;
+
+			line-height: 16px;
+
+			color: #505050;
+
+			vertical-align: top;
+
+			text-decoration: none;
+
+			text-align: center;
+
+			margin-top: 20px;
+
+			margin-left: 20px;
+
+		}
+
+		.popup-donga .btn-donga + .btn-donga{
+
+			margin-left: -1px;
+
+		}
+
+		.box-body-right2{
+
+			position: relative;
+
+			height: 47px;
+
+			margin: 12px 0;
+
+			border: 1px solid #dae1e6;
+
+			letter-spacing: -.25px;
+
+		}
+
+		.box-body-right2 .box-head2{
+
+			overflow: hidden;
+
+			height: 47px;
+
+			padding-right: 67px;
+
+		}
+
+		.box-body-right2 .box-head2 .box-in .box-service2{
+
+			float: right;
+
+			background-color: #fff;
+
+			border: 1px solid #e4e8eb;
+
+		}
+
+		.box-body-right2 .box-head2 .box-in .box-service2 .btn-prev2{
+
+			display: inline-block;
+
+			width: 6px;
+
+			height: 9px;
+
+			background-position: -162px -327px;
+
+			vertical-align: top;
+
+			content: '';
+
+			margin: 7px 8px 6px;
+
+		}
+
 		/* 공통 */
 
 		.clearfix::after{
@@ -1230,7 +1428,7 @@
 		
 		.box-body-left2 .link-media2::before, .box-body-left2 .link-media2::after,
 		
-		.list, .title, .option{
+		.list, .title, .option, .box-body-right2 .box-service2 .btn-prev2{
 
 			background-image: url(img/네이버.png);
 
@@ -1584,9 +1782,48 @@
 
 								</div>
 
-									<div class="box-body"></div>
+							</div>
 
-								</div>
+									<div class="box-body">
+
+										<div class="donga">
+
+											<span class="line line-top"></span>
+
+											<span class="line line-bottom"></span>
+
+											<span class="line line-left"></span>
+
+											<span class="line line-right"></span>
+
+											<div class="donga-box">
+
+												<span class="line line-top"></span>
+
+												<span class="line line-bottom"></span>
+
+												<span class="line line-left"></span>
+
+												<span class="line line-right"></span>
+
+												<a href="#" class="news-donga">
+													동아 일보
+
+												</a>
+
+												<div class="popup-donga">
+
+													<a href="" class="btn-donga"></a>
+
+													<a href="" class="btn-donga"></a>
+
+												</div>
+	
+											</div>
+			
+										</div>
+
+									</div>
 
 						</div>
 
@@ -1621,6 +1858,30 @@
 										</div>
 
 							</div>
+
+						</div>
+
+						<div class="box-body-right2">
+
+							<div class="box-head2">
+
+								<div class="box-in clearfix">
+
+									<div class="box-contents2">
+
+										<a href="#" class="link-stock"></a>
+
+									</div>
+
+									<div class="box-service2">
+
+										<a href="#" class="btn-prev2"></a>
+
+										<a href="#" class="btn-next2"></a>
+
+									</div>
+
+								</div>
 
 						</div>
 
