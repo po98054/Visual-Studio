@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>공지사항 작성하기</title>
+
+	<style>
+
+		.content{
+
+			margin-top: 3px;
+
+		}
+
+		.table{
+
+			background-color: darksalmon;
+
+			color: white;
+
+			text-align: center;
+
+			border: 3px solid white;
+
+		}
+
+	</style>
+
+</head>
+
+<body>
+
+	<form action="insert.no" method="post">
+
+		<div class="title"></div>
+
+			<label><b>제목</b></label>
+
+			<input type="text" name="title" placeholder="제목을 입력하시오.">
+
+		</div>	
+
+		<ol ></ol>
+
+		<br>
+
+		<div class="content">
+
+			<label class="content2" style="text-align: center;"><b>내용</b></label>
+
+			<textarea cols="30" rows="10"></textarea>
+
+		</div>
+
+		<div class="file">
+
+			<label><b>첨부파일</b></label>
+
+			<input type="file" name="" id="">
+
+		</div>
+
+		<input type="button" value="작성하기">
+
+		<hr>
+
+		<table class="table" border="solid">
+
+			<tr>
+
+				<td>번호</td>
+
+				<td colspan="2">제목</td>
+
+				<td>작성자</td>
+
+				<td>작성일</td>
+
+				<td>조회수</td>
+
+			</tr>
+
+			<tr style="background-color: lightgoldenrodyellow; color: black; border: 2px solid white;">
+
+				<td style= "width: 5%; text-align: left;">9</td>
+
+				<td style= "width: 30%; text-align: left;">공지사항 제목 9</td>
+
+				<td><input style= "width: 30%;" type="button" value="바로가기"></td>
+
+				<td style= "width: 15%; text-align: left;">user01</td>
+
+				<td style= "width: 15%; text-align: left;">2021-03-29</td>
+
+				<td style= "width: 5%; text-align: left;">34</td>
+				
+			</tr>
+
+			<tr style="background-color: lightgoldenrodyellow; color: black; border: 2px solid white;">
+
+				<td style= "width: 5%; text-align: left;">6</td>
+
+				<td style= "width: 30%; text-align: left;">공지사항 제목 6</td>
+
+				<td><input style= "width: 30%;" type="button" value="바로가기"></td>
+
+				<td style= "width: 15%; text-align: left;">answ445</td>
+
+				<td style= "width: 15%; text-align: left;">2021-03-12</td>
+
+				<td style= "width: 5%; text-align: left;">67</td>
+				
+			</tr>
+
+			<tr style="background-color: lightgoldenrodyellow; color: black; border: 2px solid white;">
+
+				<td style= "width: 5%; text-align: left;">3</td>
+
+				<td style= "width: 30%; text-align: left;">공지사항 제목 3</td>
+
+				<td><input style= "width: 30%;" type="button" value="바로가기"></td>
+
+				<td style= "width: 15%; text-align: left;">testg12</td>
+
+				<td style= "width: 15%; text-align: left;">2021-03-01</td>
+
+				<td style= "width: 5%; text-align: left;">98</td>
+				
+			</tr>
+
+			<tr style="background-color: lightgoldenrodyellow; color: black; border: 2px solid white;">
+
+				<td style= "width: 5%; text-align: left;">2</td>
+
+				<td style= "width: 30%; text-align: left;">공지사항 제목 2</td>
+
+				<td><input style= "width: 30%;" type="button" value="바로가기"></td>
+
+				<td style= "width: 15%; text-align: left;">palwe3</td>
+
+				<td style= "width: 15%; text-align: left;">2021-01-02</td>
+
+				<td style= "width: 5%; text-align: left;">85</td>
+				
+			</tr>
+
+			<tr style="background-color: lightgoldenrodyellow; color: black; border: 2px solid white;">
+
+				<td style= "width: 5%; text-align: left;">1</td>
+
+				<td style= "width: 30%; text-align: left;">공지사항 제목 1</td>
+
+				<td><input style= "width: 30%;" type="button" value="바로가기"></td>
+
+				<td style= "width: 15%; text-align: left;">xml23</td>
+
+				<td style= "width: 15%; text-align: left;">2020-12-24</td>
+
+				<td style= "width: 5%; text-align: left;">124</td>
+				
+			</tr>
+
+			<tr>
+
+				<td colspan="4">전체공지사항 갯수</td>
+
+				<td colspan="2">5개</td>
+
+			</tr>
+
+		</table>
+
+	</form>
+	
+</body>
+
+</html>
