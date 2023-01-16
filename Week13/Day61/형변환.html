@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>형변환</title>
+
+</head>
+
+<body>
+
+	<script>
+
+		let num = 10;
+
+		let str = String(num);
+
+		console.log(typeof num);
+
+		console.log(typeof str);
+
+		console.log(str);
+
+		str = '' + num;
+
+		console.log(typeof str);
+
+		console.log(str);
+
+		console.log(`${str} : ` + typeof str);
+
+		let num2 = Number(true);
+
+		let num3 = Number(false);
+
+		let num4 = Number(undefined);
+
+		let num5 = Number(null);
+
+		let num6 = Number('123.34');
+
+		let num7 = Number('23,12');
+
+		let num8 = Number('');
+
+		let num9 = parseInt('123.34');
+
+		let num10 = parseInt('234,123');
+
+		console.log(`${num2} : ` + typeof num2);
+
+		console.log(`${num3} : ` + typeof num3);
+
+		console.log(`${num4} : ` + typeof num4);
+
+		console.log(`${num5} : ` + typeof num5);
+
+		console.log(`${num6} : ` + typeof num6);
+
+		console.log(`${num7} : ` + typeof num7);
+
+		console.log(`${num8} : ` + typeof num8);
+
+		console.log(`${num9} : ` + typeof num9);
+
+		console.log(`${num10} : ` + typeof num10);
+
+		console.log(Boolean(0));
+
+		console.log(Boolean(1));
+
+		console.log(Boolean(''));
+
+		console.log(Boolean(' '));
+
+		console.log(Boolean('0'));
+
+		console.log(Boolean('1'));
+
+		console.log(Boolean('Hello'));
+
+		console.log(Boolean(0.0));
+
+	</script>
+	
+</body>
+
+</html>
