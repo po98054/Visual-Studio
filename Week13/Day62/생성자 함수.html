@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>생성자 함수</title>
+
+</head>
+
+<body>
+
+	<script>
+
+		function Book(title, author){
+
+			this.title = title;
+
+			this.author = author;
+
+			this.print = function () {
+
+				console.log(`제목 : ${this.title} 저자 : ${this.author}`);
+
+			}
+
+		}
+
+		let book = new Book('이것이 자바다', '김종국');
+
+		let book2 = new Book('이것이 게임이다.', '유재석');
+
+		book.print();
+
+		book2.print();
+
+	</script>
+	
+</body>
+
+</html>

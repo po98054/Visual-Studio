@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>화살표 함수</title>
+
+</head>
+
+<body>
+
+	<script>
+
+		let callbackTest = function(str, func){
+
+			func(str);
+
+		}
+
+		callbackTest("Hello", console.log);
+
+		//callbackTest("안녕", alert);
+
+		callbackTest("Hello", function(){console.log('익명 함수')});
+
+		let arrowFunc = (str, func) => { func(str); };
+
+		arrowFunc("Hi Arrow", console.log);
+
+		let arrowFunc2 = str => console.log(str);
+
+		arrowFunc2("김국진");
+
+		let sum = (num, num2) => num + num2;
+
+		console.log(sum(1,2));
+
+	</script>
+	
+</body>
+
+</html>

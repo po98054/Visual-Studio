@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>객체</title>
+
+</head>
+
+<body>
+
+	<script>
+
+		let user = {
+
+			id : "po98087",
+
+			pw : "54321",
+
+			printHello : function(){console.log("안녕")}
+
+		};
+
+		console.log(user.id);
+
+		console.log(user['pw'])
+
+		console.log(user.printHello);
+
+		user.address = '포항시 남구 대잠동'
+
+		console.log(user.address);
+
+		delete user.id;
+
+		console.log(user);
+
+		console.log(`'pw' in user : ${'pw' in user}`);
+
+		console.log(`'tel' in user : ${'tel' in user}`);
+
+		for(property in user){
+
+			console.log(`user.${property} = ${user[property]}`);
+
+		}
+
+		// for(변수명 of 객체명){이 때 변수명은 값을 가져옴}
+
+	/*	delete user.printHello;
+
+		console.log(user);
+
+		for(value of user){
+
+			console.log(value);
+
+		}*/
+
+		const book = {
+
+			name : '이것이 자바다',
+
+			price : 1000
+
+		};
+
+		book.price = 2000;
+
+		console.log(book);
+
+		let os = 'android';
+
+		let phone = {
+
+			[os] : 'Version 1.1'
+
+		}
+
+		console.log(phone);
+
+		let os2 = 'ios';
+
+		phone[os2] = 'Version 2.1';
+
+		console.log(phone);
+
+		let id = 'po98087';
+
+		let pw = '54321';
+
+		let user2 = {
+
+			id,
+
+			pw
+
+		};
+
+		console.log(user2);
+
+	</script>
+	
+</body>
+
+</html>

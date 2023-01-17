@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>호이스팅</title>
+
+</head>
+
+<body>
+
+	<script>
+
+		x = 10;
+
+		var x;
+
+		console.log(x);
+
+		//y = 20;
+
+		let y;
+
+		console.log(y);
+
+		test();
+
+		function test() {console.log('Hi');}
+
+		// var test2; -> test2(); -> test2 = function(){console.log('Hello')};
+
+		test2();
+
+		var test2 = function() {
+
+			console.log("JAMES");
+
+		}
+
+	</script>
+	
+</body>
+
+</html>

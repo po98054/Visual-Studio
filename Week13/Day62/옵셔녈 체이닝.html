@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>옵셔널 체이닝</title>
+
+</head>
+
+<body>
+
+	<script>
+
+		let user = {
+
+			id : "po98087",
+
+			pw : "54321",
+
+			authority : {
+
+				name : 'admin',
+
+				value : 10
+
+			}
+
+		}
+
+		user.authority.name = 'user';
+
+		user.authority.value = 9;
+
+		user?.name.firstName = '김';
+
+	</script>
+	
+</body>
+
+</html>

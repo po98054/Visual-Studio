@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>깊은 복사</title>
+
+</head>
+
+<body>
+
+	<script>
+
+		let user = {
+
+			id : 'po98054',
+
+			pw : '54321'
+
+		}
+
+		let user2 = {};
+
+		/*for(key in user) {
+
+			user2[key] = user[key];
+
+		}*/
+
+		Object.assign(user2, user, {name : '유재석'}, {name : "김국진", age : 30});
+
+		user2.id = 'po98087';
+
+		console.log(user);
+
+		console.log(user2);
+
+	</script>
+	
+</body>
+
+</html>
