@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>연습 예제</title>
+
+</head>
+
+<body>
+
+	<script>
+
+		// 알림창을 통해 이름을 입력받고, 입력받은 이름을 콘솔에 출력하는 코드를 작성하세요.
+
+		/*let name = prompt("이름을 입력하세요","유재석");
+
+		console.log(name);*/
+
+		// 알림창을 통해 두 수를 입력 받아 두 수의 합을 확인하는 코드를 작성하세요.
+
+		/*let num = Number(prompt("숫자를 입력하세요."));
+
+		let num2 = Number(prompt("숫자를 입력하세요."));
+
+		console.log(num);
+
+		console.log(num2);
+
+		//let sum = Number(num) + Number(num2);
+
+		let sum = num + num2;
+
+		console.log(sum);
+
+		let num3 = prompt("숫자를 입력하세요.");
+
+		let num4 = prompt("숫자를 입력하세요.");
+
+		sum = +num3 + +num4;
+
+		console.log(sum);*/
+
+		// 입력한 값이 숫자가 아닌 경우 0으로 대체해서 합을 구하도록 수정해 보세요.
+
+		let num = prompt("숫자를 입력하세요.");
+
+		let num2 = prompt("숫자를 입력하세요.");
+
+	/*	console.log(`이전 확인 값은 ${num}`);
+
+		if(+num)
+
+			num = +num;
+
+		else
+
+			num = 0;
+
+		console.log(`최종 확인 값은 ${num}`);
+
+		console.log(`이전 확인 값은 ${num2}`);
+
+		if(+num2)
+
+			num2 = +num2;
+
+		else
+
+			num2 = 0;
+
+			console.log(`최종 확인 값은 ${num2}`);
+
+		let sum = num + num2;
+
+		console.log(sum);*/
+
+		// 강사님 버전
+
+		function sum(num, num2){
+
+			num = num ?? 0;
+
+			num2 = num2 ?? 0;
+
+			let temp1 = +num;
+
+			let temp2 = +num2;
+
+			if(temp1 != num)
+
+				num = 0;
+
+			if(temp2 != num2)
+
+				num2 = 0;
+
+			return +num + +num2;
+
+		}
+
+		// 강사님 버전 2
+
+		function sum2(num, num2){
+
+			num = num ?? 0;
+
+			num2 = num2 ?? 0;
+
+			num = isNaN(+num) ? 0 : +num;
+
+			num2 = isNaN(+num2) ? 0 : +num2;
+
+			return num + num2;
+
+		}
+
+		console.log(sum(num,num2))
+
+		console.log(sum2(num,num2))
+
+	</script>
+	
+</body>
+
+</html>

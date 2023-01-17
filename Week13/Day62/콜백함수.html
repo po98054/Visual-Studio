@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>콜백함수</title>
+
+</head>
+
+<body>
+
+	<script>
+
+	function ok(){
+
+		console.log('확인했습니다.');
+
+	}
+
+	function cancle(){
+
+		console.log('취소했습니다..');
+
+	}
+
+	function toBeContinue(title, okFunc, cancleFunc){
+
+		if(confirm(title)) 
+
+			okFunc();
+
+		else
+
+			cancleFunc();
+
+	}
+
+	//toBeContinue("계속하시겠습니까?", ok, cancle);
+
+	toBeContinue("계속하시겠습니까?", function(){console.log("확인");}, function(){console.log('취소');});
+	
+</script>
+	
+</body>
+
+</html>

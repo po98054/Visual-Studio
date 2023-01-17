@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>반복문</title>
+
+</head>
+
+<body>
+
+	<script>
+
+		let i;
+
+		let j;
+
+		outer:for(i = 0; i < 10; i++) {
+
+			for(j = 0; j < 10; j++) {
+
+				console.log(`${i}, ${j}`);
+
+				if(confirm("중지하겠습니까?")); {
+
+					break outer;
+
+				}
+
+			}
+
+		}
+
+	</script>
+	
+</body>
+
+</html>

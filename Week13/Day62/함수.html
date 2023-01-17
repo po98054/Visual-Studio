@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>함수</title>
+
+</head>
+
+<body>
+
+	<script>
+
+		showMyName();
+
+		function sayHello(){
+
+			console.log("HELLO");
+
+		}
+
+		sayHello();
+
+		// 주어진 두 변수를 더해서 콘솔에 출력하는 함수
+
+		function ADD(a, b){
+
+			console.log(`${a + b}`)
+
+		}
+
+		ADD(10,20);
+
+		function ADD2(a, b){
+
+			return a + b;
+
+		}
+
+		console.log(`${ADD2(10,20)}`);
+
+		console.log(ADD2(2,3));
+
+		let name = "유재석";
+
+		function Name(){
+
+			console.log(name);
+
+		}
+
+		Name();
+
+		function showMyName(firstName = '김', lastName = '국진'){
+
+			console.log(firstName + lastName);
+
+		}
+
+		showMyName('하', '성민');
+
+		showMyName('김');
+
+		showMyName();
+
+		showMyName('김', undefined)
+
+	</script>
+	
+</body>
+
+</html>
