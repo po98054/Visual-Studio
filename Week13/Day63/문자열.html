@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>문자열</title>
+
+</head>
+
+<body>
+
+	<script>
+
+		let str = 'abc,def,ghi';
+
+		// str에서 ,가 몇개 있는지 확인하는 코드를 작성하세요.
+
+		console.log(str.includes(","));
+
+		let num = str.includes(",");
+
+		console.log(+num);
+
+		let target = ','; // as를 찾아봅시다.
+
+		let pos = 0;
+
+		let count = 0;
+
+		/*while (true) {
+
+			let foundPos = str.indexOf(target, pos);
+
+  		if (foundPos == -1) break;
+
+  		pos = foundPos + 1; // 다음 위치를 기준으로 검색을 이어갑니다.
+
+			count++;
+
+		}
+
+		console.log(`str에서 ,의 갯수 : ${count}개 입니다.`);*/
+
+		// 강사님 버전.
+
+		let index = -1;
+
+		let count2 = 0; 
+
+		do{
+
+			index = str.indexOf(',', index + 1);
+
+			count2 = index >= 0 ? count2 + 1 : count2;
+
+		} while(index != -1);
+
+		console.log(`${str}에서 ,의 갯수 : ${count}개 입니다.`);
+
+		// str에서 ,를 기준으로 문자열들을 출력하는 코드를 작성하세요.
+
+		let index2 = -1;
+
+		let start = 0;
+		
+		let end = start + 1;
+
+		do {
+
+				start = index2 + 1;
+
+				index2 = str.indexOf(',', index2 + 1);
+
+				end = index2 != -1 ? index2 : str.length;
+
+				let word = str.substring(start, end);
+
+				console.log(word);
+
+		} while(index2 != -1);
+
+	</script>
+	
+</body>
+
+</html>

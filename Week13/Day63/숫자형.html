@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>숫자형</title>
+
+</head>
+
+<body>
+
+	<h1 style="color:#ff5064">안녕하세요</h1>
+
+	<script>
+
+		let num = 0xff;
+
+		console.log(num);
+
+		let num2 = 0o70;
+
+		console.log(num2);
+
+		let num3 = 0b1111;
+
+		console.log(num3);
+
+		let num4 = 1e3;
+
+		console.log(num4);
+
+		let num5 = 1e-3;
+
+		console.log(num5);
+
+		console.log(`${num}과 ${num2}와 ${num3}중에서 큰 값은 ${Math.max(num, num2, num3)}`);
+
+		console.log(`${num}과 ${num2}와 ${num3}중에서 작은 값은 ${Math.min(num, num2, num3)}`);
+
+		console.log(`2의 5번 거듭제곱한 결과 : ${Math.pow(2,5)}`);
+
+		let red = 255;
+
+		let blue = 80;
+
+		let green = 100;
+
+		let color = `#${red.toString(16)}${blue.toString(16)}${green.toString(16)}`;
+
+		console.log(color);
+
+		let num6 = 0.1;
+
+		let num7 = 0.2;
+
+		let res = num6 + num7;
+
+		console.log(res == 0.3);
+
+		console.log(res.toFixed(6) == 0.3);
+
+		console.log(isFinite(1 / 0));
+
+		console.log(isFinite(1 / 2));
+
+		console.log(+'abc' === NaN);
+
+		console.log(+'abc');
+
+		console.log(Object.is(+'abc', NaN));
+
+		console.log(+0 == -0);
+
+		console.log(Object.is(+0, -0));
+
+	</script>
+	
+</body>
+
+</html>
