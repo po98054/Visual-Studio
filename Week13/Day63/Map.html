@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Map</title>
+
+</head>
+
+<body>
+
+	<script>
+
+		let student = [{
+
+			grade : 1,
+
+			classNum : 1,
+
+			Num : 1,
+
+			Name : '유재석'
+
+		}, {
+
+			grade : 1,
+
+			classNum : 1,
+
+			Num : 2,
+
+			Name : '박수홍'
+
+		}, {
+
+			grade : 2,
+
+			classNum : 1,
+
+			Num : 1,
+
+			Name : '이광수'
+
+		}, {
+
+			grade : 3,
+
+			classNum : 1,
+
+			Num : 1,
+
+			Name : '김국진'
+
+		}];
+
+		student = student.map(item => {
+
+			let age = 17;
+
+			if(item.grade == 2)
+
+				age = 18;
+
+			if(item.grade == 3)
+
+				age = 19;
+
+			item.age = age;
+
+			return item;
+
+		})
+
+		student.forEach(item => console.log(item));
+
+	</script>
+	
+</body>
+
+</html>

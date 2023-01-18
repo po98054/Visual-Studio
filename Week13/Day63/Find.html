@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Find</title>
+
+</head>
+
+<body>
+
+	<script>
+
+		let arr = [{
+
+			title : '이것이 자바다',
+
+			author : '김국진'
+
+		},
+	
+		{
+
+			title : "자바의 정석",
+
+			author : '유재석'
+
+		}, {
+
+			title : '자바의 필승법',
+			
+			author : '유재석'
+
+		}];
+
+		let book = arr.find(function(item){
+
+			return item.author == '김국진';
+
+		})
+
+	 console.log(book);
+
+	 let bookIndex = arr.findIndex(item => item.author == '유재석');
+
+	 console.log(bookIndex);
+
+	 let books = arr.filter(item => item.author == '유재석');
+
+	 console.log(books);
+
+	</script>
+	
+</body>
+
+</html>

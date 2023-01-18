@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Date</title>
+
+</head>
+
+<body>
+
+	<script>
+
+		let now = new Date(Date.parse('2023-01-01T00:00:00.000Z'));
+
+		function getDate(date){
+
+			let year = date.getFullYear();
+
+			let month = date.getMonth() + 1;
+
+			let day = date.getDate();
+
+			let hour = date.getHours();
+
+			let minute = date.getMinutes();
+
+			let ms = date.getMilliseconds();
+
+			return `${year}년 ${month}월 ${day}일 ${hour}시 ${minute}분 ${ms}초`
+
+		}
+
+		console.log(getDate(now));
+
+	</script>
+	
+</body>
+
+</html>
