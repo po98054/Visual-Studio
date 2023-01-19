@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>요소 탐색</title>
+
+</head>
+
+<body>
+
+	<div id="box1" class="box box11">안녕하세요</div>
+
+	<div id="box2" class="box box22">김국진입니다.</div>
+
+	<ul class="list list1"> 오늘의 할일
+
+		<li>
+
+			<ol class="list list2">
+
+				<li id="start">1교시</li>
+
+				<li>2교시</li>
+
+				<li>3교시</li>
+
+			</ol>
+
+		</li>
+
+		<li>저녁</li>
+
+		<li>
+
+			<ol class="list list3">
+
+				<li>1교시</li>
+
+				<li>2교시</li>
+
+				<li>3교시</li>
+
+			</ol>
+
+		</li>
+
+	</ul>
+
+	<script>
+
+		let box = document.getElementById('box1');
+
+		console.log(box);
+
+		console.log(box2);
+
+		console.log(box1)
+
+		let boxes = document.querySelectorAll('.box');
+
+		console.log(boxes);
+
+		for(temp of boxes) {
+
+			console.log(temp);
+
+		}
+
+		let box4 = document.querySelector('.box');
+
+		console.log(box4);
+
+		console.log(box.matches('.box'));
+
+		console.log(box.matches('.box11'));
+
+		console.log(box.matches('.box22'));
+
+		let start = document.querySelector('#start');
+
+		console.log(start);
+
+		let list = start.closest('.list1');
+
+		console.log(list);
+
+		list = start.closest('.list2');
+
+		console.log(list);
+
+		list = start.closest('.list3');
+
+		console.log(list);
+
+		console.log("=========================");
+
+		let boxes1 = document.getElementsByClassName('box');
+
+		console.log(`boxes1.length : ${boxes1.length}`);
+
+		let boxes2 = document.querySelectorAll('.box');
+
+		console.log(`boxes2.length : ${boxes2.length}`);
+
+	</script>
+
+	<div class="box">테스트</div>
+	
+	<script>
+
+		console.log(`boxes1.length : ${boxes1.length}`);
+
+		console.log(`boxes2.length : ${boxes2.length}`);
+
+	</script>
+
+</body>
+
+</html>

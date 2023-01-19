@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>테이블 탐색</title>
+
+</head>
+
+<body>
+
+	<table border="1">
+
+		<caption>표</caption>
+
+			<thead>
+
+				<tr>
+
+					<th>과목</th>
+
+					<th>이름</th>
+
+					<th>성적</th>
+
+				</tr>
+
+			</thead>
+
+			<tbody>
+
+				<tr>
+
+					<th>HTML</th>
+
+					<th>유재석</th>
+
+					<th>85</th>
+
+				</tr>
+
+			</tbody>
+
+			<tfoot>
+
+				<tr>
+
+					<td colspan="2">평균</td>
+
+					<td>100</td>
+
+				</tr>
+
+			</tfoot>
+
+	</table>
+
+	<script>
+
+		let table = document.body.firstElementChild;
+
+		console.log("==== rows ======")
+
+		let rows = table.rows;
+
+		for(row of rows){
+
+			console.log(row.sectionRowIndex);
+
+			console.log(row.rowIndex);
+
+			console.log(row);
+
+		}
+
+		console.log(`rows의 개수는 : ${table.rows.length}개 입니다.`);
+
+		console.log("=======================");
+
+		console.log("======= caption ===========");
+
+		let caption = table.caption;
+
+		console.log(caption);
+
+		console.log("=======================");
+
+		console.log("======= thead ==========");
+
+		let thead = table.tHead;
+
+		console.log(thead);
+
+		console.log("=======================");
+
+		console.log("======= tfoot ==========");
+
+		let tfoot = table.tFoot;
+
+		console.log(tfoot);
+
+		console.log("=======================");
+
+		console.log("======= tbody ==========");
+
+		let tbodies = table.tBodies;
+
+		console.log(tbodies[0]);
+
+		console.log("=======================");
+
+		console.log("======= td ==========");
+
+		let tds = rows[0].cells;
+
+		for(td of tds) {
+
+			console.log(td.cellIndex);
+
+			console.log(td);
+
+		}
+
+		console.log("=======================");
+
+	</script>
+	
+</body>
+
+</html>

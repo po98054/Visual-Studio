@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Try/Catch</title>
+
+</head>
+
+<body>
+
+	<script>
+
+		try{
+
+			throwError();
+
+			let num = num1;
+
+			console.log(num);
+
+		} catch(e){
+
+			if(e instanceof SyntaxError){
+
+					console.log(e.message);
+
+				if(e instanceof ReferenceError) {
+
+					console.log('변수가 정의되지 않아 참조할 수 없습니다.')
+
+				}
+
+			}
+
+		}
+
+		function throwError(){
+
+			throw new SyntaxError('SyntaxError 발생');
+
+		}
+
+	</script>
+	
+</body>
+
+</html>

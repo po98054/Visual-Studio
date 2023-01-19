@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Dom 탐색</title>
+
+	<script>
+
+		window.onload = function(){
+
+		let htmlTag = document.documentElement;
+
+		//console.log(htmlTag.innerHTML);
+
+		let bodyTag = document.body;
+
+		//console.log(bodyTag);
+
+		let headTag = document.head;
+
+		//console.log(headTag);
+
+		let bodyChildNodes = bodyTag.childNodes;
+
+		console.log(bodyChildNodes);
+
+		for(let childNodes of bodyChildNodes){
+
+			console.log(childNodes);
+
+		}
+
+		console.log("====================================")
+
+		console.log(bodyTag.firstChild);
+
+		console.log("====================================")
+
+		console.log(bodyTag.lastChild);
+
+		console.log("====================================")
+
+		let bodyChildElements = bodyTag.children;
+
+		for(let element of bodyChildElements){
+
+			console.log(element);
+
+		}
+
+		console.log("====================================")
+
+		console.log(bodyTag.firstElementChild)
+
+		console.log("====================================")
+
+		console.log(bodyTag.lastElementChild)
+
+		console.log("====================================")
+
+		};
+
+	</script>
+
+</head>
+
+<body>
+
+	<div>안녕하세요</div>
+
+	<a href="#">링크</a>
+
+	<ul>
+
+		<li>사과</li>
+
+		<li>포도</li>
+
+	</ul>
+
+</body>
+
+</html>
