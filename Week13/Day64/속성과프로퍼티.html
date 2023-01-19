@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>속성과 프로퍼티</title>
+
+</head>
+
+<body>
+
+	<input type="text" value="123" data-num="456">
+
+	<div value="123">123</div>
+
+	<script>
+
+		let e1 = document.querySelector('input');
+
+		let e2 = document.querySelector('div');
+
+		console.log(e1.value);
+
+		console.log(e2.value);
+
+		console.log(`div.value : ${e2.getAttribute('value')}`);
+
+		console.log(e1);
+
+		console.log(`input.data-set : ${e1.dataset.num}`);
+
+	</script>
+	
+</body>
+
+</html>

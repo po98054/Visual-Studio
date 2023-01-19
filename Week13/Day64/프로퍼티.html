@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>프로퍼티</title>
+
+</head>
+
+<body>
+
+	<div>안녕하세요</div>
+
+	<ul>
+
+		<li>사과</li>
+
+		<li>바나나</li>
+
+		<li>오렌지</li>
+
+	</ul>
+
+	<input type="text" id="text">
+
+	<script>
+
+		let ul = document.querySelector('ul');
+
+		console.log(ul.innerHTML);
+
+		console.log(ul.outerHTML);
+
+		console.log(ul.textContent);
+
+		let lis = ul.children;
+
+		let count = 0;
+
+		for(li of lis) {
+
+			//li.textContent = ++count + li.textContent;
+
+			li.textContent = '<a href"#">링크</a>';
+
+		}
+
+		let div = document.body.firstElementChild;
+
+		div.innerHTML += '<button>버튼</button>';
+
+		div.outerHTML = '<a href="#">링크</a>';
+
+		text.value = '123';
+
+	</script>
+	
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>EX 03</title>
+
+	<style>
+
+		.bg-yellow{
+
+			background-color: yellow;
+
+			color: red;
+
+		}
+
+	</style>
+
+</head>
+
+<body>
+
+	<ul>
+
+		<li onclick="changeStyle(1)">1</li>
+
+		<li onclick="changeStyle(2)">2</li>
+
+		<li onclick="changeStyle(3)">3</li>
+
+	</ul>
+
+	<script>
+
+		// li 태그를 클릭하면 [지정 스타일이] 코드를 작성하세요
+
+		// 지정 스타일 : 배경색이 노란색 글자색 빨간색
+
+		function changeStyle(index) {
+
+			let e1 = document.querySelector(`li:nth-child(${index})`);
+
+			e1.classList.toggle('bg-yellow');
+
+		}
+
+	</script>
+	
+</body>
+
+</html>
