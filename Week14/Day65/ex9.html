@@ -16,19 +16,15 @@
 
 <body>
 
-	<button id="btn" onclick="">></button> <input type="text" id="text"> / <input type="text" id="text2"> <button id="btn2" onclick="next()"><</button>
+	<button id="btn" onclick="">></button> 1 <button id="btn2" onclick="next()"><</button>
 
 	<script>
 
-		function next(){
+		function next() {
 
-			let text = document.querySelector('#text').value;
+			let text = document.querySelector('#text').textContent;
 
 			++text;
-
-			if(text > 7) 
-
-				text = 1;
 
 			console.log(text)
 
