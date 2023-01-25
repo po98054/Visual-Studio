@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>EX 03</title>
+
+</head>
+
+<body>
+
+	<div id="box1">1</div>
+
+	<div id="box2" src="3.jpg">2</div>
+
+	<img id="img" src="none.jpg" alt="없음">
+
+	<script>
+
+		box1.innerHTML = '<button>1</button>';
+
+		console.log(box1.outerHTML);
+
+		box1.innerHTML += '<button>2</button>'
+
+		box1.innerHTML = box1.innerHTML + '<button>3</button>'
+
+		box1.outerHTML = '<span>1</span>'
+
+		console.log(box2.src);
+
+		console.log(img.src);
+
+		console.log(box2.getAttribute('src'))
+
+	</script>
+	
+</body>
+
+</html>

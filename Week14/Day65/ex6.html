@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>EX 06</title>
+
+	<style>
+
+		.bg{
+
+			color : pink;
+
+		}
+
+		.bg2{
+
+			color : green;
+
+		}
+
+		.bg3{
+
+			color : red;
+
+		}
+
+	</style>
+
+</head>
+
+<body>
+
+	<ul>
+
+		<li onclick="change()">1</li>
+
+		<li onclick="change2()">2</li>
+
+		<li onclick="change3()">3</li>
+
+	</ul>
+
+	<script>
+
+		function change() {
+
+			let e1 = document.querySelector(`li:nth-child(1)`);
+
+			e1.classList.toggle('bg');
+
+		}
+
+		function change2() {
+
+			let e2 = document.querySelector(`li:nth-child(2)`);
+
+			e2.classList.toggle('bg2');
+
+		}
+
+		function change3() {
+
+			let e3 = document.querySelector(`li:nth-child(3)`);
+
+			e3.classList.toggle('bg3');
+
+		}
+
+	</script>
+	
+</body>
+
+</html>

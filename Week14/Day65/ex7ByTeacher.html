@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>EX 07 By Teacher</title>
+
+	<style>
+
+		.list-menu {
+
+			border : 3px solid black;
+
+			list-style: none;
+
+			padding: 0;
+
+		}
+
+		.list-menu::after{
+
+			content: '';
+
+			clear: both;
+
+			display: both;
+
+		}
+
+		.item-menu{
+
+			width: 33.33%;
+
+			float: left;
+
+			height: 30px;
+
+		}
+
+		.item-menu + .item-menu{
+
+			border-left: 3px solid black;
+
+			margin-left: -3px;
+
+		}
+
+		.link-menu{
+
+			display: block;
+
+			text-align: center;
+
+			line-height: 20px;
+
+			font-size: 15px;
+
+			text-decoration: none;
+
+			color : black;
+
+		}
+
+		.bg-yellow {
+
+			background-color: green;
+
+			color: red;
+
+		}
+
+	</style>
+
+</head>
+
+<body>
+
+	<ul class="list-menu" id="menu">
+
+		<li class="item-menu">
+
+			<a href="#" class="link-menu">메뉴 1</a>
+
+		</li>
+
+		<li class="item-menu">
+
+			<a href="#" class="link-menu">메뉴 2</a>
+
+		</li>
+
+		<li class="item-menu">
+
+			<a href="#" class="link-menu">메뉴 3</a>
+
+		</li>
+
+	</ul>
+
+	<ul class="list-menu" id="menu2">
+
+		<li class="item-menu">
+
+			<a href="#" class="link-menu">메뉴 1</a>
+
+		</li>
+
+		<li class="item-menu">
+
+			<a href="#" class="link-menu">메뉴 2</a>
+
+		</li>
+
+		<li class="item-menu">
+
+			<a href="#" class="link-menu">메뉴 3</a>
+
+		</li>
+
+	</ul>
+
+	<script>
+
+		let list = document.querySelectorAll('#menu > li');
+
+		list.forEach((item) => {
+
+			item.onclick =  () => {
+
+				list.forEach((item) =>  {
+
+					item.classList.remove('bg-yellow')
+
+				});
+
+				item.classList.add('bg-yellow');
+
+			}
+
+		})
+
+		let list2 = document.querySelectorAll('#menu2>li');
+
+		let selectedItem;
+
+		list2.forEach((item) => {
+
+			item.onclick =  () => {
+
+				if(selectedItem) 
+
+					selectedItem.classList.remove('.bg-yellow');
+
+				selectedItem = item;
+
+				selectedItem.classList.add('.bg-yellow');
+
+			}
+
+		})
+
+	</script>
+	
+</body>
+
+</html>

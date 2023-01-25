@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>EX 07</title>
+
+	<style>
+
+		.container-box{
+
+			float: left;
+
+			border: 1px solid blueviolet;
+
+		}
+
+		.box1{
+
+			width: 100px;
+
+			height: 50px;
+
+			position: static;
+
+			float: left;
+
+			border: 1px solid brown;
+
+		}
+
+		.box2{
+
+			width: 100px;
+
+			height: 50px;
+
+			display: inline-block;
+
+			position: static;
+
+			border: 1px solid blue;
+
+		}
+
+		.bg-pink{
+
+			color: green;
+
+			background-color: pink;
+
+		}
+
+	</style>
+
+</head>
+
+<body>
+
+	<div class="container-box">
+
+		<div class="box1" onclick="change()">N극</div>
+
+		<div class="box2" onclick="change2()">S극</div>
+	
+	</div>
+
+	<ul>
+
+		<li onclick="changeBackgroundColor(1)">1</li>
+
+		<li onclick="changeBackgroundColor(2)">2</li>
+
+		<li onclick="changeBackgroundColor(3)">3</li>
+
+	</ul>
+
+	<script>
+
+		function changeBackgroundColor(index) {
+
+			let list = document.querySelector(`li:nth-child(${index})`);
+
+			console.log(list);
+
+			list.classList.toggle('bg-pink');
+
+			list.classList.remove('bg-pink');
+
+		}
+
+	</script>
+
+	<script>
+
+		let box1 = document.querySelector('.box1');
+
+		let box2 = document.querySelector('.box2');
+
+		function change() {
+
+			box1.style.color = 'pink';
+
+			box1.style.backgroundColor = 'red'
+
+			box1.style.textAlign = 'center'
+
+		}
+
+		function change2() {
+
+			box2.style.color = 'green';
+
+			box2.style.backgroundColor = 'blue'
+
+			box2.style.textAlign = 'center'
+
+		}
+
+	</script>
+	
+</body>
+
+</html>

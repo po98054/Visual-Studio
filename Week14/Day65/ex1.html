@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>EX1</title>
+
+	<script src=""></script>
+
+</head>
+
+<body>
+
+	<div class="box1 box">1</div>
+
+	<div class="box2 box">2</div>
+
+	<script>
+
+		let arr1 = document.querySelectorAll('.box');
+
+		let arr2 = document.getElementsByClassName('box');
+
+		for(item of arr1) {
+
+			item.style.color = 'red';
+
+		}
+
+		for(item of arr2) {
+
+			item.style.fontSize = '30px';
+
+		}
+
+	</script>
+
+</body>
+
+</html>

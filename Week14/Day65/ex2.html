@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>EX 02</title>
+
+</head>
+
+<body>
+
+	<div id="first">1</div>
+
+	<ul>
+
+		<li>1</li>
+
+		<li>2</li>
+
+		<li>3</li>
+
+	</ul>
+
+	<script>
+
+		console.log("==========================================")
+
+		console.log(document.body.children);
+
+		console.log("==========================================")
+
+		console.log(document.body.firstElementChild);
+
+		console.log("==========================================")
+
+		document.body.childNodes.forEach(item => console.log(item.textContent));
+
+		console.log("==========================================")
+
+		console.log(document.body.firstChild.textContent);
+
+		console.log("==========================================")
+
+		console.log(document.body.lastChild.textContent);
+
+		console.log("==========================================")
+
+		console.log(document.body.children);
+
+		console.log("==========================================")
+
+		let children = document.body.children;
+
+		for(item of children) {
+
+			console.log(item);
+
+		}
+
+		console.log("==========================================")
+
+		let li = document.querySelector('li:nth-child(2)');
+
+		console.log("==========================================")
+
+		console.log(li.parentElement);
+
+		console.log("==========================================")
+
+		console.log(li.nextElementSibling);
+
+		console.log("==========================================")
+		
+		console.log(li.previousElementSibling);
+
+		console.log("==========================================")
+
+		let list1 = document.querySelectorAll('li');
+
+		list1.forEach((item, index, arr) => {
+
+			console.log(`arr[${index}] = ${item.textContent}`);
+
+			console.log(`arr[${index}] = ${arr[index].textContent}`);
+
+		})
+
+		console.log("==========================================")
+
+		console.log("==========================================")
+
+		let list2 = document.getElementsByTagName('li');
+
+		for(item of list2) {
+
+			console.log(item.textContent);
+
+		}
+
+		console.log("==========================================")
+
+		console.log("==========================================")
+
+		console.log("==========================================")
+
+	</script>
+	
+</body>
+
+</html>

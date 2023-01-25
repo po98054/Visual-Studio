@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>EX 04</title>
+
+	<style>
+
+		.box{
+
+			width: 100px;
+
+			height: 100px;
+
+			background-color: pink;
+
+			font-size: 20px;
+
+			text-align: center;
+
+			line-height: 100px;
+
+			margin-bottom: 10px;
+
+		}
+
+		.box1{
+
+			color : red;
+
+		} 
+
+		.box2{
+
+			color: green;
+
+		}
+
+	</style>
+
+</head>
+
+<body>
+
+	<div class="box box1">1</div>
+
+	<div class="box box2">2</div>
+
+	<script>
+
+		let box1 = document.body.querySelector('.box1');
+
+		let box2 = document.body.querySelector('.box2');
+
+		box1.className = 'box';
+
+		box1.classList.toggle('box1');
+
+		box1.classList.remove('box1');
+
+		box1.classList.add('box1');
+
+		box2.classList.add('box2');
+
+		box1.style.backgroundColor = 'aqua';
+
+		box2.style.color = 'yellow'
+
+	</script>
+	
+</body>
+
+</html>
