@@ -138,12 +138,6 @@
 
 		}
 
-		.item-box:nth-child(2n){
-
-			background-color: aqua;
-
-		}
-
 	</style>
 
 </head>
@@ -228,11 +222,13 @@
 
 		selectedItem.classList.add('selected');
 
+		selectedItem.click();
+
 		}
 
 		let itemList = document.querySelectorAll('.item-menu');
 
-		itemList.forEach((item) => {
+		itemList.forEach((item, index) => {
 
 			item.onclick = () => {
 
@@ -242,22 +238,27 @@
 
 				selectedItem.classList.add('selected');
 
-				}
-
-		});
-
-		itemList.forEach((item) => {
-
-			item.onclick = () => {
-
-				document.querySelector('.item-box:nth-child(1)').hidden = false;
-
-				document.querySelector('.item-box:nth-child(2)').hidden = true;
-
+				selectBox(index);
 
 				}
 
 		});
+
+		function selectBox(index) {
+
+			document.querySelectorAll('.item-box').forEach((item, i) => {
+
+				if(index == i)
+
+					item.hidden = false;
+
+				else
+
+					item.hidden = true;
+
+			})
+
+		}
 
 	</script>
 	

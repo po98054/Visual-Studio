@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>요소 생성, 삭제, 삽입</title>
+
+	<style>
+
+		.box{
+
+			padding: 20px;
+
+			background-color: aqua;
+
+			margin: 10px 0;
+
+		}
+
+	</style>
+
+</head>
+
+<body>
+
+	<div class="box"></div>
+
+	<script>
+
+	let box = document.querySelector('.box');
+
+	let div1 = document.createElement('div');
+
+	div1.classList.add('inner-box');
+
+	div1.textContent = '안녕하세요';
+
+	box.append(div1);
+
+	let a1 = document.createElement('a');
+
+	let textNode1 = document.createTextNode('네이버로 이동');
+
+	a1.append(textNode1);
+
+	a1.href = 'http://www.naver.com';
+
+	box.prepend(a1);
+
+	let p1 = '유재석입니다.'
+
+	box.before(p1);
+
+	let btn1 = document.createElement('button');
+
+	btn1.innerHTML = '<strong>버튼</strong>';
+
+	box.after(btn1);
+
+	btn1.remove();
+
+	let box2 = box.cloneNode(true);
+
+	box2.append('추가');
+
+	box.after(box2);
+
+	let box3 = box.cloneNode(false);
+
+	box2.after(box3);
+
+	</script>
+	
+</body>
+
+</html>

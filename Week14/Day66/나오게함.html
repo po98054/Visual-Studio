@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>나오게함</title>
+
+	<style>
+
+		.container{
+
+			margin-bottom: 30px;
+
+		}
+
+		.box{
+
+			height: 100px;
+
+			background-color: pink;
+
+		}
+
+		.box2{
+
+			height: 100px;
+
+			background-color: green;
+
+		}
+
+		.box3{
+
+			height: 100px;
+
+			background-color: aqua;
+
+		}
+
+	</style>
+
+	<script src="..//jquery.min.js"></script>
+
+</head>
+
+<body>
+
+	<div class="container">
+
+		<button class="btn-show">보여주기</button>
+
+		<button class="btn-hide">감추기</button>
+
+		<button class="btn-toggle">토글 이벤트</button>
+
+		<div class="box"></div>
+
+	</div>
+
+	<div class="container">
+
+		<button class="btn-fadeIn">진하게</button>
+
+		<button class="btn-fadeOut">연하게</button>
+
+		<button class="btn-fadeToggle">토글 이벤트</button>
+
+		<button class="btn-fadeTo">원하는 해상도까지</button>
+
+		<div class="box2"></div>
+
+	</div>
+
+	<div class="container">
+
+		<button class="btn-slideDown">0으로</button>
+
+		<button class="btn-slideUp">원위치</button>
+
+		<button class="btn-slideToggle">토글 이벤트</button>
+
+		<div class="box3"></div>
+
+	</div>
+
+	<script>
+
+		console.log('==========================================================================')
+
+		$('.btn-show').click(() => $('.box').show(5000, () => console.log('박스 보여주기')));
+
+		$('.btn-hide').click(() => $('.box').hide('fast', () => console.log('박스 감추기')));
+
+		$('.btn-toggle').click(() => $('.box').toggle('slow', () => console.log('박스 토글 이벤트')));
+
+		console.log('==========================================================================')
+
+		$('.btn-fadeIn').click(() => $('.box2').fadeIn(5000, () => console.log('박스 진하게 보여주기')));
+
+		$('.btn-fadeOut').click(() => $('.box2').fadeOut(2000, () => console.log('박스 연하게')));
+
+		$('.btn-fadeToggle').click(() => $('.box2').fadeToggle(4000, () => console.log('박스 토글 이벤트')));
+
+		$('.btn-fadeTo').click(() => $('.box2').fadeTo(1000, 0.2, () => console.log('원하는 해상도까지')));
+
+		console.log('==========================================================================')
+
+		$('.btn-slideDown').click(() => $('.box3').slideDown());
+
+		$('.btn-slideUp').click(() => $('.box3').slideUp(2000, () => console.log('원위치')));
+
+		$('.btn-slideToggle').click(() => $('.box3').slideToggle(3000, () => console.log('박스 토글 이벤트')));
+
+		console.log('==========================================================================')
+
+	</script>
+
+</body>
+
+</html>
