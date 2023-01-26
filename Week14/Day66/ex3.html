@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>EX 03</title>
+
+	<style>
+
+		.container{
+
+			float: left;
+
+		}
+
+		*{
+
+			padding: 0;
+
+			margin: 0;
+
+		}
+
+		.menu-list{
+
+			list-style: none;
+
+		}
+
+		.menu-item{
+
+			width: 300px;
+
+			height: 50px;
+
+		}
+
+		.menu-link, .menu-link2, .menu-link3{
+
+			text-decoration: none;
+
+			color: brown;
+
+			display: block;
+
+			border: 5px solid gray;
+
+			height: 100%;
+
+			text-align: center;
+
+			line-height: 50px;
+
+			font-size: 25px;
+
+			font-weight: bold;
+
+		}
+
+		.submenu-list, .submenu-list2, .submenu-list3{
+
+			margin-top: -5px;
+
+			display: none;
+
+		}
+
+		.submenu-item{
+
+			height: 50px;
+
+		}
+
+		.submenu-item ~ .submenu-item{
+
+			margin-top: -5px;
+
+		}
+
+		.submenu-link{
+
+			display: block;
+
+			height: 100%;
+
+			border: 5px solid darkblue;
+
+			text-align: center;
+
+			line-height: 50px;
+
+			box-sizing: border-box;
+
+			font-size:25px;
+
+			color: darkgreen;
+
+			font-weight: bold;
+
+		}
+
+	</style>
+
+	<script src="..//jquery.min.js"></script>
+
+</head>
+
+<body>
+
+	<div class="container">
+
+		<ul class="menu-list">
+
+			<li class="menu-item">
+	
+				<a href="#" class="menu-link">메뉴 1</a>
+	
+					<ul class="submenu-list">
+	
+						<li class="submenu-item">
+	
+							<a href="#" class="submenu-link">메뉴1-1</a>
+	
+						</li>
+	
+						<li class="submenu-item">
+	
+							<a href="#" class="submenu-link">메뉴1-2</a>
+	
+						</li>
+	
+					</ul>
+	
+			</li>
+	
+		</ul>
+
+	</div>
+
+	<div class="container">
+
+		<ul class="menu-list">
+
+			<li class="menu-item">
+	
+				<a href="#" class="menu-link2">메뉴 1</a>
+	
+					<ul class="submenu-list2">
+	
+						<li class="submenu-item">
+	
+							<a href="#" class="submenu-link">메뉴1-1</a>
+	
+						</li>
+	
+						<li class="submenu-item">
+	
+							<a href="#" class="submenu-link">메뉴1-2</a>
+	
+						</li>
+	
+					</ul>
+	
+			</li>
+	
+		</ul>
+
+	</div>
+
+	<div class="container">
+
+	<ul class="menu-list">
+
+		<li class="menu-item">
+
+			<a href="#" class="menu-link3">메뉴 1</a>
+
+				<ul class="submenu-list3">
+
+					<li class="submenu-item">
+
+						<a href="#" class="submenu-link">메뉴1-1</a>
+
+					</li>
+
+					<li class="submenu-item">
+
+						<a href="#" class="submenu-link">메뉴1-2</a>
+
+					</li>
+
+				</ul>
+
+		</li>
+
+	</ul>
+
+</div>
+
+<script>
+
+	$('.menu-link').click(() => $('.submenu-list').toggle(3000, () => console.log('박스 보여주기')));
+
+	$('.menu-link2').click(() => $('.submenu-list2').toggle(200, () => console.log('박스 보여주기')));
+
+	$('.menu-link3').click(() => $('.submenu-list3').toggle(5000, () => console.log('박스 보여주기')));
+
+</script>
+	
+</body>
+
+</html>
