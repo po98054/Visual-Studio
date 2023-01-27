@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>get</title>
+
+	<script src="../jquery.min.js"></script>
+
+</head>
+
+<body>
+
+	<div class="box">
+
+		<a href="http://www.naver.com">네이버로</a>
+
+	  <input type="text" id="input1" num="1">
+
+		<input type="checkbox" id="input2" checked>
+
+	</div>
+
+	<button class="btn1">get Text</button> <br>
+
+	<button class="btn2">get HTML</button> <br>
+
+	<button class="btn3">get Value</button> <br>
+
+	<button class="btn4">get Attr</button> <br>
+
+	<button class="btn5">get Prop</button> <br>
+
+	<button class="btn6">set Text</button> <br>
+
+	<button class="btn7">set HTML</button> <br>
+
+	<button class="btn8">set Value</button> <br>
+
+	<button class="btn9">set Attr</button> <br>
+
+	<button class="btn10">set Prop</button> <br>
+
+	<script>
+
+		let text = $('.box').text();
+
+		$('.btn1').click(() => {console.log(text)});
+
+		$('.btn2').click(() => {console.log($('.box').html)});
+
+		$('.btn3').click(() => {console.log($('#input1').val)});
+
+		$('.btn4').click(() => {console.log($('#imput1').attr('num'))});
+
+		$('.btn5').click(() => {console.log($('#input2').prop('checked'))});
+
+		$('.btn6').click(() => {$('a').text('다음')});
+
+		$('.btn7').click(() => {$('.box').html('<h1>안녕</h1>')});
+
+		$('.btn8').click(() => $('#input1').val('123'));
+
+		$('#input1').attr('num', '12');
+
+		$('.btn9').click(() => console.log($('#input1').attr('num')));
+
+		$('.btn10').click(() => $('#input2').prop('checked', false));
+
+	</script>
+	
+</body>
+
+</html>

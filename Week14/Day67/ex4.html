@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>EX 04</title>
+
+	<script src="..//jquery.min.js"></script>
+
+	<style>
+
+		.box{
+
+			width: 600px;
+
+			height: 200px;
+
+			border: 3px solid pink;
+
+		}
+
+	</style>
+
+</head>
+
+<body>
+
+	<div class="box"></div>
+
+	<label>
+
+		<input type="checkbox" name="fruit" value="apple">사과
+
+	</label>
+
+	<label>
+
+		<input type="checkbox" name="fruit" value="banana" checked>바나나
+
+	</label>
+
+	<label>
+
+		<input type="checkbox" name="fruit" value="orange">오렌지
+
+	</label>
+
+	<br>
+
+	<button id="btn">클릭</button>
+
+	<script>
+
+		/*let list = $('[name=fruit]');
+
+		for (let i = 0; i < list.length; i++) {
+
+			console.log(list.eq(i).val());
+
+		}
+
+		list.each(function(){
+
+			console.log($(this).val());
+
+		})*/
+
+		$('#btn').click(() => {
+
+			let fruit = [];
+
+			$('#btn').click(() => {
+
+			$('[name=fruit]:checked').each(function(index){
+
+					fruit.push($(this).val());
+
+			})
+
+			let str = fruit.join(',');
+
+			$('.box').text(str);
+	
+			})
+
+		})
+
+			//$('[name=fruit]').each(function(){
+
+				//if($(this).prop('checked')) {
+
+					//console.log($(this).val());
+
+				//}
+
+			//})
+
+	//	})
+
+	</script>
+
+</body>
+
+</html>
