@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>EX 01</title>
+
+	<style>
+
+		*{
+
+			padding: 0;
+
+			margin: 0;
+
+		}
+
+		ul{
+
+			list-style: none;
+
+		}
+
+		a{
+
+			text-decoration: none;
+
+		}
+
+		.list-menu{
+
+			display: flex;
+
+		}
+
+		.item-menu{
+
+			width: 100%;
+
+			height: 50px;
+
+		}
+
+		.link-menu{
+
+			height: 100%;
+
+			display: block;
+
+			line-height: 50px;
+
+			text-align: center;
+
+			border: 3px solid black;
+
+		}
+
+		.item-menu + .item-menu{
+
+			margin-left: -3px;
+
+		}
+
+		.list-sub{
+
+			border: 3px solid black;
+
+			margin-top: -3px;
+
+			display: none;
+
+		}
+
+		.list-sub .link-sub{
+
+			height: 50px;
+
+			line-height: 50px;
+
+			text-align: center;
+
+			display: block;
+
+		}
+
+		.list-sub .item-sub + .item-sub{
+
+			border-top: 3px solid black
+
+		}
+
+	</style>
+
+	<script src="..//jquery.min.js"></script>
+
+</head>
+
+<body>
+
+	<ul class="list-menu">
+
+		<li class="item-menu">
+
+			<a href="#" class=" link-menu">메뉴 1</a>
+
+			<ul class="list-sub">
+
+				<li class="item-sub">
+
+					<a href="#" class="link-sub">메뉴 1-1</a>
+
+				</li>
+
+				<li class="item-sub">
+
+					<a href="#" class="link-sub">메뉴 1-2</a>
+
+				</li>
+
+			</ul>
+
+		</li>
+
+		<li class="item-menu">
+
+			<a href="#" class=" link-menu">메뉴 2</a>
+
+			<ul class="list-sub">
+
+				<li class="item-sub">
+
+					<a href="#" class="link-sub">메뉴 2-1</a>
+
+				</li>
+
+				<li class="item-sub">
+
+					<a href="#" class="link-sub">메뉴 2-2</a>
+
+				</li>
+
+			</ul>
+
+		</li>
+
+		<li class="item-menu">
+
+			<a href="#" class=" link-menu">메뉴 3</a>
+
+			<ul class="list-sub">
+
+				<li class="item-sub">
+
+					<a href="#" class="link-sub">메뉴 3-1</a>
+
+				</li>
+
+				<li class="item-sub">
+
+					<a href="#" class="link-sub">메뉴 3-2</a>
+
+				</li>
+
+			</ul>
+
+		</li>
+
+	</ul>
+
+<script>
+
+	/*$('.item-menu:nth-child(1)').click(() => $('.item-menu:nth-child(1)').find('.list-sub').toggle());
+
+	$('.item-menu:nth-child(2)').click(() => $('.item-menu:nth-child(2)').find('.list-sub').toggle());
+
+	$('.item-menu:nth-child(3)').click(() => $('.item-menu:nth-child(3)').find('.list-sub').toggle());*/
+
+	$('.item-menu').click(function() {
+
+		$(this).children('.list-sub').stop().slideToggle(1000);
+
+	});
+
+</script>
+	
+</body>
+
+</html>

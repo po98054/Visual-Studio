@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Animate</title>
+
+	<script src="..//jquery.min.js"></script>
+
+	<style>
+
+		.box{
+
+			width: 100px;
+
+			height: 100px;
+
+			background-color: red;
+
+			position: relative;
+
+		}
+
+	</style>
+
+</head>
+
+<body>
+
+	<div>
+
+		<button class="btn">버튼</button>
+
+	</div>
+
+	<div class="box"></div>
+
+	<script>
+
+		$('.btn').click(() => {
+
+			let cssBefore = {
+
+				marginLeft : 0
+
+			};
+
+			let cssAfter = {
+
+				marginLeft : '40px'
+
+			};
+
+			$('.box1').animate({
+
+				'margin-left' : '200px'
+
+			}, 1000, function(){
+
+				$(this).animate({
+
+					marginLeft : 0
+
+				}, 1000, console.log('원상복귀'))
+
+			});
+
+			$('.box').animate(cssAfter, 1000, function(){
+
+				$(this).animate(cssBefore, 1000, console.log('원상복귀'))
+
+			});
+
+		});
+
+	</script>
+	
+</body>
+
+</html>

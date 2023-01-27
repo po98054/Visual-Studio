@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>탐색</title>
+
+	<script src="..//jquery.min.js"></script>
+
+</head>
+
+<body>
+
+	<ul>
+
+		<li class="start">1</li>
+
+		<li class="2">2</li>
+
+		<li>3</li>
+
+		<li class="center">4</li>
+
+		<li>5</li>
+
+		<li class="6">6</li>
+
+		<li class="end">7</li>
+
+	</ul>
+
+	<script>
+
+		/*$('.center').siblings().css('color','green');
+
+		$('.center').siblings('.start').css('color','pink');
+
+		$('.center').siblings('.end').css('color','gray');
+
+		$('.center').siblings('li:nth-child(2)').css('color','red');
+
+		$('.center').prev().css('color','aqua');
+
+		$('.center').next().css('color','blue');*/
+
+		$('.center').prevAll().css('text-align','center');
+
+		$('.center').nextAll().css('text-align','right');
+
+		$('.center').prevUntil('li:nth-child(2)').css('font-size','70px');
+
+		$('.center').nextUntil('li:nth-child(6)').css('font-size','50px');
+
+	</script>
+	
+</body>
+
+</html>

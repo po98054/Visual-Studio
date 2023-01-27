@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>탐색2</title>
+
+	<script src="..//jquery.min.js"></script>
+
+	<style>
+
+		*{
+
+			padding: 20px;
+
+			border: 1px solid gray;
+
+		}
+
+		div{
+
+			margin-bottom: 30px;
+
+		}
+
+	</style>
+
+</head>
+
+<body>
+
+	<div class="container">
+
+		<div class="box">
+
+			<ul class="list-box">
+
+				<li>1</li>
+	
+			</ul>
+
+		</div>
+
+		<div class="box2">
+
+			<ul>
+
+				<li>1</li>
+	
+			</ul>
+
+		</div>
+
+		<div class="box3">
+
+			<ul>
+
+				<li class="item-box">1</li>
+	
+			</ul>
+
+		</div>
+
+	</div>
+
+	<script>
+
+		$('.box').children().css('background', 'green');
+
+		$('.container').children('.itme-box').css('background', 'yellow');
+
+		$('.container').find('.item-box').css('background', 'pink');
+
+	</script>
+	
+</body>
+
+</html>
