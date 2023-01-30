@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>CSS Classes</title>
+
+	<script src="..//jquery.min.js"></script>
+
+	<style>
+
+		.box{
+
+			width: 100px;
+
+			height: 100px;
+
+			border: 3px solid green;
+
+			margin-top: 30px;
+
+		}
+
+		.selected{
+
+			background-color: aqua;
+
+		}
+
+	</style>
+
+</head>
+
+<body>
+
+	<button class="btn">AddClass</button>
+
+	<button class="btn2">RemoveClass</button>
+
+	<button class="btn3">ToggleClass</button>
+
+	<button class="btn4">CSS</button>
+
+	<button class="btn5">CSS2</button>
+
+	<button class="btn6">CSS 값</button>
+
+	<div class="box">박스</div>
+
+	<script>
+
+		$('.btn').click(function(){
+
+			$('.box').addClass('selected');
+
+		})
+
+		$('.btn2').click(function(){
+
+			$('.box').removeClass('selected');
+
+		})
+
+		$('.btn3').click(function(){
+
+			$('.box').toggleClass('selected');
+
+		})
+
+		$('.btn4').click(function(){
+
+			$('.box').css('backgroundColor','gray');
+
+		})
+
+		$('.btn5').click(function(){
+
+			$('.box').css({borderWidth: '3px', fontSize: '30px', marginLeft: '25px', backgroundColor: 'blue', color: 'yellow'});
+
+		})
+
+		$('.btn6').click(function(){
+
+			console.log($('.box').css('backgroundColor'));
+
+			console.log($('.box').css('fontSize'));
+
+		})
+
+	</script>
+	
+</body>
+
+</html>

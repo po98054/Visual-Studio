@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>요소 추가</title>
+
+	<script src="..//jquery.min.js"></script>
+
+	<style>
+
+		.base-box{
+
+			padding: 30px;
+
+			margin: 30px 0;
+
+			border: 3px solid pink;
+
+			background-color: aqua;
+
+		}
+
+		.child-box{
+
+			padding: 30px;
+
+			margin: 30px 0;
+
+			border: 3px solid gray;
+
+			background-color: blue;
+
+		}
+
+	</style>
+
+</head>
+
+<body>
+
+	<button class="btn">append</button>
+
+	<button class="btn2">appendTo</button>
+
+	<button class="btn3">prepend</button>
+
+	<button class="btn4">prependTo</button>
+
+	<button class="btn5">after</button>
+
+	<button class="btn6">before</button>
+
+	<button class="btn7">remove</button>
+
+	<button class="btn8">empty</button>
+
+	<div class="base-box">
+
+		<div class="child-box">base</div>
+
+	</div>
+
+	<script>
+
+		let appendCount = 1;
+
+		let prependCount = 1;
+
+		let afterCount = 1;
+
+		let beforeCount = 1;
+
+		$('.btn').click(function(){
+
+			$('.base-box').append(`<div class="child-box">append${appendCount++}</div>`);
+
+		});
+
+		$('.btn2').click(function(){
+
+			$('<div class="child-box">append</div>').appendTo('.base-box');
+
+		});
+
+		$('.btn3').click(function(){
+
+			$('.base-box').prepend(`<div class="child-box">prepend${prependCount++}</div>`);
+
+		});
+
+		$('.btn4').click(function(){
+
+			$(`<div class="child-box">prepend${prependCount++}</div>`).prependTo('.base-box');
+
+		});
+
+		$('.btn5').click(function(){
+
+			$('.base-box').after(`<div class="box">after${afterCount++}</div>`);
+
+		});
+
+		$('.btn6').click(function(){
+
+			$('.base-box').before(`<div class="box">before${beforeCount++}</div>`);
+
+		});
+
+		$('.btn7').click(function(){
+
+			$('.base-box').remove();
+			
+		});
+
+		$('.btn8').click(function(){
+
+			$('.base-box').empty()
+
+		});
+
+	</script>
+	
+</body>
+
+</html>
