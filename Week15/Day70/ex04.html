@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>회원 가입</title>
+
+	<script src="..//jquery.min.js"></script>
+
+	<style></style>
+
+</head>
+
+<body>
+
+	<form action="" id="form">
+
+	<label for="">회원가입</label><br>
+
+	<input type="text" name="id" id="id"><br>
+
+	<input type="password" name="pw" id="pw"><br>
+
+	<input type="password" name="pw2" id="pw2"><br>
+
+	<label for="">
+
+	<input type="radio" name="gender" id="men">남성
+
+	<input type="radio" name="gender" id="women">여성
+
+	</label><br>
+
+	<button class="btn">회원 가입</button>
+
+	</form>
+
+	<script>
+
+		$('#form').submit(function(){
+
+			if($('#id').val().length < 1)
+
+				alert('아이디는 반드시 입력해야 합니다.');
+
+			if($('#pw').val().length < 1)
+
+				alert('비밀번호는 반드시 입력해야 합니다.');
+
+			if($('#pw2').val().length < 1)
+
+				alert('비밀번호는 반드시 입력해야 합니다.');
+
+			if(!$('[name=gender]').prop('checked'))
+
+				alert('성별은 체크되어야 합니다.');
+
+		})
+
+	</script>
+	
+</body>
+
+</html>

@@ -3615,7 +3615,11 @@
 
 											<div class="box-page">
 
-												<em>1</em>/ 6
+												<span data-page="1" class="page">1</span>
+
+												<span>/</span>
+
+												<span data-max="6" class="max-page">6</span>
 
 											</div>
 
@@ -3855,7 +3859,11 @@
 
 											<div class="box-page">
 												
-												<em>1</em>/ 6
+												<span data-page="1" class="page">1</span>
+
+												<span>/</span>
+
+												<span data-max="6" class="max-page">6</span>
 											
 											</div>
 
@@ -3998,6 +4006,34 @@
 			}
 
 		},1000);
+
+		$('.btn-prev.img2-before').click(function(){
+
+			let curPage = $('.page').text();
+
+			let maxPage = $('.max-page').text();
+
+			curPage = +curPage;
+
+			curPage = --curPage == 0 ? maxPage : curPage;
+
+			console.log(curPage);
+
+			$('.page').text(curPage);
+
+		});
+
+		$('.btn-next.img2-before').click(() => {
+
+			let curPage = $('.page').text('page');
+
+			let maxPage = $('.max-page').data('max');
+
+			curPage = ++curPage > maxPage ? 1 : curPage;
+
+			$('.page').text(curPage);
+
+		});
 
 	</script>
 
