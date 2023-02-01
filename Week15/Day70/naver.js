@@ -103,3 +103,15 @@ function rollingLeft(liSelector, ulSelector, animationTime, duration){
 	return setInterval(moveLeft, duration, liSelector, ulSelector, animationTime);
 
 }
+
+function moveTop(liSelector, ulSelector, animationTime){
+
+
+
+}
+
+function rollingTop(liSelector, ulSelector, animamtionTime, duration){
+
+	return setInterval(moveTop, duration, liSelector, ulSelector, animamtionTime);
+
+}
