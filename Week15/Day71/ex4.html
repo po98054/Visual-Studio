@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>EX 04</title>
+
+	<script src="..//jquery.min.js"></script>
+
+</head>
+
+<body>
+
+	<div class="box-body">
+
+		<ul class="list-press clearfix selected">
+
+			<li class="item-press">
+
+				<a href="#" class="box-thumb">
+
+					<img src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/015.png" alt="언론사1" height="20">
+
+				</a>
+
+			</li>
+
+		</ul>
+
+		<ul class="list-press clearfix">
+
+			<li class="item-press">
+
+				<a href="#" class="box-thumb">
+
+					<img src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/002.png" alt="언론사2" height="20">
+
+				</a>
+
+			</li>
+			
+		</ul>
+
+		<button class="prev">이전</button>
+
+		<button class="next">다음</button>
+
+	</div>
+
+	<script>
+
+		$('.next').click(function(){
+
+			//$('.list-press clearfix selected').child();
+
+			console.log($('.list-press.clearfix.selected').find('item-press'))
+
+			/*let curObj = $('list-press.clearfix.selected')
+
+			if(curObj.next().length != 0) {
+
+				curObj = curObj.next();
+
+			}
+
+			selecteMenu(curObj);*/
+
+		})
+
+		function selecteMenu(el){
+
+			$('list-press.clearfix').removeClass('selected');
+
+			if(el != null && el.length != 0){
+
+				el.addClass('selected');
+
+			}
+
+		}
+
+	</script>
+	
+</body>
+
+</html>

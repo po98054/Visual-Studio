@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>EX 03</title>
+
+	<script src="..//jquery.min.js"></script>
+
+	<style>
+
+		.box{
+
+			position: fixed;
+
+			right: 0;
+
+			top: 0;
+
+			bottom: 0;
+
+			width: 200px;
+
+			box-shadow: 0 3px 5px 1px rgba(0, 0, 0, 0.3);
+
+		}
+
+	</style>
+
+</head>
+
+<body>
+
+	<i class="fa-solid fa-bars"></i>
+
+	<button class="btn">왼쪽으로 이동</button>
+
+	<div class="box">
+
+		<button class="btn2">X</button>
+
+	</div>
+
+	<script>
+
+		$('.btn').click(function(){
+
+			$('.box').animate({
+
+				marginRight : '50px'
+
+			})
+
+		})
+
+		$('.btn2').click(function(){
+
+			$('.box').animate({
+
+				marginRight : 0
+
+			})
+
+		})
+
+	</script>
+	
+</body>
+
+</html>
