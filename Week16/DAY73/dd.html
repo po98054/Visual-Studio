@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>EX 05</title>
+
+	<script src="..//jquery.min.js"></script>
+
+	<style>
+
+		form{
+
+			width: 500px;
+
+			margin: 0 auto;
+
+		}
+
+		.title{
+
+			text-align: center;
+
+		}
+
+		[name=id], [name=pw], [name=pw2]{
+
+			display: block;
+
+			width: 100%;
+
+			height: 40px;
+
+			margin-bottom: 20px;
+
+			border-radius: 10px;
+
+			border: 1px solid red;
+
+			line-height: 40px;
+
+			padding: 0 10px;
+
+			box-sizing: border-box;
+
+		}
+
+		.btn-submit{
+
+			width: 100%;
+
+			margin-top: 20px;
+
+			height: 40px;
+
+			border-radius: 10px;
+
+			border: 1px solid green;
+
+			cursor: pointer;
+
+			display: block;
+
+		}
+
+	</style>
+
+</head>
+
+<body>
+
+	<form action="" method="get" class="form">
+
+		<h1 class="title">회원가입</h1>
+
+		<input type="text" name="id" placeholder="아이디">
+
+		<input type="password" name="pw" placeholder="비밀번호">
+
+		<input type="password" name="pw2" placeholder="비밀번호 확인">
+
+		<div>
+
+			<label>
+
+				<input type="radio" name="gender" value="남성"> 남성
+
+			</label>
+
+			<label>
+
+				<input type="radio" name="gender" value="여성"> 여성
+
+			</label>
+
+		</div>
+
+		<button type="submit" class="btn-submit">회원 가입</button>
+
+	</form>
+
+	<script>
+
+		// 아이디는 5 ~ 13자, 영문, 숫자만 가능
+
+		// 비밀번호는 8 ~ 20자, 영문, 숫자, !@#$%만 가능
+
+		
+
+		$('.form').submit(function(){
+
+			
+
+			let id = $('[name=id]').val();
+
+			if(id.length == 0){
+
+				alert('아이디는 필수 입력 항목입니다.');
+
+				$('[name=id]').focus();
+
+				return false;
+
+			}
+
+			let idRegex = /^[a-zA-z0-9]{5,13}$/;
+
+			if(!idRegex.test(id)){
+
+				alert('아이디는 5~13자 이상이며 영문자와 숫자만 입력가능합니다.');
+
+				$('[name=id]').focus();
+
+				return false;
+
+			}
+
+			let pw = $('[name=pw]').val();
+
+			if(pw.length == 0){
+
+				alert('비밀번호는 필수 입력 항목입니다.');
+
+				$('[name=pw]').focus();
+
+				return false;
+
+			}
+
+			let pwRegex = /^[a-zA-z0-9!@#$%]{8,20}$/;
+
+			if(!pwRegex.test(pw)){
+
+				alert('비밀번호는 8 ~ 20자 이상이며 영문자와 숫자와 !@#$% 만 가능합니다.');
+
+				$('[name=pw]').focus();
+
+				return false;
+
+			}
+
+			let pw2 = $('[name=pw2]').val();
+
+			if(pw != pw2){
+
+				alert('비밀번호와 비밀번호 확인이 일치하지 않습니다.');
+
+				$('[name=pw]').focus();
+
+				return false;
+
+			}
+
+			if($('[name=gender]:checked').length == 0){
+
+				alert('성별은 필수 입력 항목입니다.');
+
+				$('[name=gender]').focus();
+
+				return false;
+
+			}
+
+			alert('회원가입이 성공적으로 되었습니다.');
+
+		})
+
+	</script>
+	
+</body>
+
+</html>

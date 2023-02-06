@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>회원 가입 양식</title>
+
+	<script src="./js/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+	<form action="">
+
+		<label for="">아이디
+
+			<input type="text" name="id" id="id">
+
+			<button class="btn">중복확인</button>
+
+		</label><br>
+
+		<label for="">비밀번호
+
+			<input type="password" name="pw" class="pw">
+
+		</label><br>
+
+		<label for="">비밀번호확인
+
+			<input type="password" name="pw2" class="pw2">
+
+		</label><br>
+
+		<label for="">지역
+
+			<input type="checkbox" name="region"> 서울
+
+			<input type="checkbox" name="region"> 부산
+
+			<input type="checkbox" name="region"> 대구
+
+		</label><br>
+
+		<button class="btn2">초기화</button>
+
+		<button class="btn3">회원가입</button>
+
+	</form>
+
+	<script>
+
+		$('.btn').click(function(){
+
+			let id = $('[name=id]').val();
+
+			let idRegex = /^[a-z][a-z0-9!@#]{6,12}$/
+
+			console.log(idRegex.test(id));
+
+			if(!idRegex.test(id)){
+
+				$('#id').css('backgroundColor','red');
+
+				return false;
+
+			} 
+
+			$('#id').css('backgroundColor','green');
+
+		})
+
+		$('.btn2').click(function(){
+
+			$('form').reset();
+
+		})
+
+		$('.btn3').click(function(){
+
+			if($('[name=region]:checked').length == 0){
+
+					alert('지역을 선택해주세요');
+
+					return false;
+
+			}
+
+		})
+
+	</script>
+	
+</body>
+
+</html>

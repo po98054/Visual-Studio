@@ -375,6 +375,8 @@ function setMenuServiceBtn(flag){
 
 	$('.container-menu .list-favority-menu').removeClass('display-none');
 
+	$('.container-menu .list-select-menu').removeClass('display-none');
+
 	$('.container-menu .list-empty-box').removeClass('display-none');
 
 	if(flag){
@@ -396,6 +398,181 @@ function setMenuServiceBtn(flag){
 		$('.container-service .group-service').first().addClass('display-none');
 
 		$('.container-menu .list-favority-menu').addClass('display-none');
+
+		$('.container-menu .list-select-menu').addClass('display-none');
+
+		tempMenuArr = selectedMenuArr.slice(0);
+
+		drawEmptyboxMenu(tempMenuArr);
+
 	}
 
 }
+
+let tempMenuArr = []; // 선택한 메뉴를 저장할 임시 배열(저장 전)
+
+let selectedMenuArr = []; // 선택한 메뉴를 저장할 배열(저장 완료)
+
+$(function(){
+
+	$('.group-service-check [type=checkbox]').click(function(){
+
+		console.log('122');
+
+		// 클릭한 요소의 value를 가져옴
+
+		let val = $(this).val();
+
+		// 전역 배열에 구독이 있는지 확인 (또는 클릭한 요소의 checked 여부를 확인)
+
+		let index = tempMenuArr.indexOf(val);
+
+		// 배열에 value가 있으면 (또는 클릭한 요소가 checked가 해제되면) 배열에 value를 제거
+
+		if(index >= 0){
+
+			tempMenuArr.splice(index, 1); // index 번지부터 1개 삭제
+
+		}
+
+		// 배열에 value가 없으면 배열의 길이가 4이상이면 현재 선택한 요소를 checked를 해제하고 알림창을 띄운 후 
+		
+		// 종료 배열의 길이가 4미만이면 배열에 value를 추가
+
+		else{
+
+			if(tempMenuArr.length >= 4){
+
+				$(this).prop('checked', false);
+
+				alert('최대 4개까지 설정할 수 있습니다.');
+
+				return;
+
+			}
+
+			tempMenuArr.push(val);
+
+		}
+
+		// 주어진 전역 배열을 list-empty-box 요소를 배치(함수로 따로 만듬)
+
+		drawEmptyboxMenu(tempMenuArr);
+
+	})
+
+})
+
+function drawEmptyboxMenu(tempMenuArr){
+
+	// select : 녹색박스, select 클래스를 제거 => 녹색 박스 제거
+
+	// 모든 박스에 있는 글자들을 ''(빈 문자열)로 초기화
+
+	$('.list-empty-box .item-box').removeClass('select').text('');
+
+	for(index in tempMenuArr){
+
+		$('.list-empty-box .item-box').eq(index).text(tempMenuArr[index]);
+
+	}
+
+	$('.list-empty-box .item-box').eq(tempMenuArr.length).addClass('select');
+
+	// 체크 박스 관리
+
+	$('.group-service-check [type=checkbox]').each(function(){
+
+		let val = $(this).val();
+
+		if(tempMenuArr.indexOf(val) != -1){
+
+			$(this).prop('checked', true);
+
+		}else{
+
+			$(this).prop('checked', false);
+
+		}
+
+	})
+
+}
+
+$(function(){
+
+	$('.group-menu .btn-save').click(function(){
+
+		if(tempMenuArr.length == 0){
+
+			alert('선택된 메뉴가 없습니다. 초기설정으로 돌아갑니다.');
+
+		}
+
+		selectedMenuArr = tempMenuArr.splice(0);
+
+		init();
+
+		$('.group-menu .btn-more').click();
+
+	});
+
+	$('.group-menu .btn-reset').click(function(){
+
+		alert('초기설정으로 돌아갑니다.');
+
+		tempMenuArr = selectedMenuArr = [];
+
+		init();
+
+		$('.group-menu .btn-more').click();
+
+	})
+
+});
+
+// 선택된 메뉴에 따른 메뉴 박스 관리 및 체크 박스 관리하는 함수
+
+function init(){
+
+	// 선택된 메뉴에 따른 메뉴 박스 관리
+
+	// 선택된 메뉴가 없는 경우 => 고정된 메뉴가 출력
+
+	if(selectedMenuArr.length == 0){
+
+		$('.list-favority-menu').show();
+
+		$('.list-select-menu').hide();
+
+	}
+
+	// 선택된 메뉴가 있는 경우 => 선택된 메뉴가 출력
+
+	else{
+
+		$('.list-favority-menu').hide();
+
+		$('.list-select-menu').show();
+
+		/*$('.list-select-menu .item-box').text('');
+
+		for(index in selectedMenuArr){
+
+			$('.list-select-menu .item-box').eq(index).text(selectedMenuArr[index]);
+
+		}*/
+
+		$('.list-select-menu').html('');
+
+		for(index in selectedMenuArr){
+
+			let str = `<li class="item-box">${selectedMenuArr[index]}</li>`;
+
+			$('.list-select-menu').append(str);
+
+		}
+
+	}
+
+};
