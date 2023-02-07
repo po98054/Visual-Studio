@@ -10,7 +10,7 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<title>EX 03 BY TEACHER</title>
+	<title>EX 05 BY TEACHER</title>
 
 	<script src="./js/jquery.min.js"></script>
 
@@ -24,7 +24,13 @@
 
 			border-radius: 10px;
 
+		}
+
+		.row{
+
 			display: flex;
+
+			margin-bottom: 20px;
 
 		}
 
@@ -122,6 +128,28 @@
 
 		}
 
+		.btn-add{
+
+			display: block;
+
+			width: 100%;
+
+			padding: 0;
+
+			height: 50px;
+
+			font-size: 30px;
+
+			border-radius: 10px;
+
+			background-color: #fff;
+
+			border: 1px solid pink;
+
+			cursor: pointer;
+
+		}
+
 	</style>
 
 </head>
@@ -130,11 +158,17 @@
 
 	<div class="box-container">
 
-		<a class="box" href="#" data-index="0">안녕하세요.</a>
+		<div class="row">
 
-		<a class="box" href="#" data-index="1">김국진</a>
+			<a class="box" href="#" onclick="popup(this)">안녕하세요.</a>
 
-		<a class="box" href="#" data-index="2">입니다.</a>
+			<a class="box" href="#" onclick="popup(this)">김국진</a>
+
+			<a class="box" href="#" onclick="popup(this)">입니다.</a>
+
+		</div>
+
+		<button class="btn-add">+</button>
 
 	</div>
 
@@ -144,23 +178,7 @@
 
 			<button class="btn-close">X</button>
 
-			<div class="contents">안녕하세요.</div>
-
-		</div>
-
-		<div class="popup">
-
-			<button class="btn-close">X</button>
-
-			<div class="contents">김국진</div>
-
-		</div>
-
-		<div class="popup">
-
-			<button class="btn-close">X</button>
-
-			<div class="contents">입니다.</div>
+			<div class="contents"></div>
 
 		</div>
 
@@ -168,13 +186,15 @@
 
 	<script>
 
-		$('.box').click(function(){
+		$(document).on('click','.box1',function(){
 
-			let index = $(this).index();
+			// 선택한 박스의 내용을 가져온다 -> 가져온 내용을 팝업창 컨텐츠에 추가 -> 팝업 컨테이너를 보여준다
+
+			let contents = $(this).text();
+
+			$('.popup .contents').text(contents);
 
 			$('.popup-container').show();
-
-			$('.popup').eq(index).show().siblings().hide();
 
 		});
 
@@ -183,6 +203,34 @@
 			$('.popup-container').hide();
 
 		});
+
+		// + 버튼 클릭 이벤트를 등록 -> 문자열로 추가할 요소들을 구성 (반복문을 이용) -> 문자열로 구성된 요소를 추가
+		
+		$('.btn-add').click(function(){
+
+			let str = '<div class="row">';
+
+			for(i = 0; i < 3; i++){
+
+				str += '<a class="box" href="#" onclick="popup(this)">12</a>';
+
+			}
+
+			str += '</div>';
+
+			$(this).before(str);
+
+		})
+
+		function popup(obj){
+
+			let contents = $(obj).text();
+
+			$('.popup .contents').text(contents);
+
+			$('.popup-container').show();
+
+		}
 
 	</script>
 	

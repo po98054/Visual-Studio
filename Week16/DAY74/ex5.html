@@ -10,7 +10,7 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<title>EX 03 BY TEACHER</title>
+	<title>EX 05</title>
 
 	<script src="./js/jquery.min.js"></script>
 
@@ -23,6 +23,10 @@
 			padding: 20px;
 
 			border-radius: 10px;
+
+		}
+
+		.row{
 
 			display: flex;
 
@@ -130,13 +134,19 @@
 
 	<div class="box-container">
 
-		<a class="box" href="#" data-index="0">안녕하세요.</a>
+		<div class="row">
 
-		<a class="box" href="#" data-index="1">김국진</a>
+			<a class="box" href="#">안녕하세요.</a>
 
-		<a class="box" href="#" data-index="2">입니다.</a>
+			<a class="box" href="#">김국진</a>
+
+			<a class="box" href="#">입니다.</a>
+
+		</div>
 
 	</div>
+
+	<button class="plus">+</button>
 
 	<div class="popup-container">
 
@@ -144,23 +154,7 @@
 
 			<button class="btn-close">X</button>
 
-			<div class="contents">안녕하세요.</div>
-
-		</div>
-
-		<div class="popup">
-
-			<button class="btn-close">X</button>
-
-			<div class="contents">김국진</div>
-
-		</div>
-
-		<div class="popup">
-
-			<button class="btn-close">X</button>
-
-			<div class="contents">입니다.</div>
+			<div class="contents"></div>
 
 		</div>
 
@@ -168,13 +162,19 @@
 
 	<script>
 
-		$('.box').click(function(){
+		$('.box').click(function(e){
+
+			e.preventDefault();
+
+			// 선택한 박스의 내용을 가져온다 -> 가져온 내용을 팝업창 컨텐츠에 추가 -> 팝업 컨테이너를 보여준다
 
 			let index = $(this).index();
 
-			$('.popup-container').show();
+			let text = $('.box').eq(index).text();
 
-			$('.popup').eq(index).show().siblings().hide();
+			$('.contents').text(text);
+
+			$('.popup-container').show();
 
 		});
 
@@ -183,6 +183,12 @@
 			$('.popup-container').hide();
 
 		});
+
+		$('.plus').click(function(){
+
+			$('.box').clone().appendTo('.box-container');
+
+		})
 
 	</script>
 	
